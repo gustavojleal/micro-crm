@@ -1,0 +1,7 @@
+{
+  "typescriptHero.imports.grouping": [
+    "Plains",
+    "Modules",
+    "Workspace"
+  ]
+}

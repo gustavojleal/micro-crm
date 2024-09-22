@@ -47,7 +47,11 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Oi, {{ title }}</h1>
+      <button (click)="translateText('en')">English</button>
+      <button (click)="translateText('pt')">Português</button>
+      <button (click)="translateText('fr')">Francais</button>
+
+      <h1>{{ 'Hello' | translate }}</h1>
       <p>Testing! Routing. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
@@ -55,13 +59,13 @@
       <nav>
         <ul>
           <li>
-            <a routerLink="/home" routerLinkActive="active">Home</a>
+            <a routerLink="/home" routerLinkActive="active">{{ 'Home' | translate }}</a>
           </li>
           <li>
-            <a routerLink="/about" routerLinkActive="active">About</a>
+            <a routerLink="/about" routerLinkActive="active">{{ 'About' | translate }}</a>
           </li>
           <li>
-            <a routerLink="/contact" routerLinkActive="active">Contact</a>
+            <a routerLink="/contact" routerLinkActive="active">{{ 'Contact' | translate }}</a>
           </li>
         </ul>
       </nav>
