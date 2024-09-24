@@ -6,6 +6,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,5 +25,5 @@ export const appConfig: ApplicationConfig = {
     ]),
      provideRouter(routes),
      provideHttpClient(withInterceptorsFromDi()),
-      provideClientHydration()]
+      provideClientHydration(), provideAnimationsAsync()]
 };
